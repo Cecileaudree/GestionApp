@@ -21,6 +21,10 @@ import java.time.LocalDate;
 @Table(name="Appareils")
 @Builder
 @Audited
+/*@AuditOverrides({
+        @AuditOverride(forClass = CustomRevisionEntity.class)
+})*/
+//@RevisionEntity(CustomRevisionListener.class)
 @JsonIdentityInfo(generator = ObjectIdGenerators.PropertyGenerator.class, property = "idAppareils")
 public class Appareils implements Serializable{
 
@@ -41,7 +45,7 @@ public class Appareils implements Serializable{
     private LocalDate datefin;
 
     private boolean istaken;
-    private boolean utilise;
+    private int utilise;
 
     //private String rapport_F1;
     @Enumerated(EnumType.STRING)

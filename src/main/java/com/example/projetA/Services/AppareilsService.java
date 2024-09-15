@@ -19,7 +19,11 @@ public interface AppareilsService {
     public void SupprimerAppareils(Long id);
 
     public Appareils modifierAppareils(Long id, AppareilsDto appareilsDto, MultipartFile file);
-    public void sendDueDateNotifications();
+    public void EnvoyeEnReparation(Long id);
+
+    public void RetourReparation(Long id);
+
+    public void EnvoyeGate(Long id);
 
 
 }
